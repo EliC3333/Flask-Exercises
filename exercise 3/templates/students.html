@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Registered Students</h2>
+<ul>
+    <!-- Loop through registered students and display their names and organizations -->
+    {% for student, organization in students.items() %}
+        <li>{{ student }} - {{ organization }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

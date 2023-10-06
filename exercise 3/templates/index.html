@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Display error message if there is any -->
+{% if error %}
+    <p style="color: red;">{{ error }}</p>
+{% endif %}
+<!-- Registration form -->
+<form action="{{ url_for('index') }}" method="post">
+    Student Name: <input type="text" name="student_name" required>
+    Organization: 
+    <select name="organization" required>
+        <option value="">Select an Organization</option>
+        <!-- Loop through organizations and display them as options -->
+        {% for org in organizations %}
+            <option value="{{ org }}">{{ org }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

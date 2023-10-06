@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <!-- Navigation bar with links to home and registered students page -->
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('registered_students') }}">Registered Students</a>
+    </nav>
+    <!-- Main content section -->
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

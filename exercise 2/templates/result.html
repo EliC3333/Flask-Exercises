@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<p>{{ message }}</p>
+{% if kind %}
+    <p>The number is <strong>{{ kind }}</strong>.</p>
+{% endif %}
+<a href="{{ url_for('index') }}">Go back</a>
+{% endblock %}
